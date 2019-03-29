@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">todolist</string>
+    <string name="action_settings">Settings</string>
+    <string name="setting_about">关于：\n开发者：欧阳兆贤\n专业班级：计算机科学与技术7班\n学号：3115005158</string>
+    <string name="title_activity_new">NewActivity</string>
+    <string name="title_activity_note">NoteActivity</string>
+</resources>

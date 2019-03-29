@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.NoteActivity"
+    tools:showIn="@layout/activity_note">
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_note_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/grey_700"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="@drawable/untick"
+            android:id="@+id/iv_finish"
+            android:padding="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/tv_note_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/grey_500"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_below="@+id/tv_note_time"
+            android:id="@+id/tv_note_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/grey_500" />
+
+        <View
+            android:layout_alignParentRight="true"
+            android:id="@+id/v_color"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"/>
+    </RelativeLayout>
+
+    <com.neo1946.todolist.richtext.RichTextView
+        app:rt_view_text_init_hint=" "
+        android:id="@+id/tv_note_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rt_view_text_line_space="6dp"
+        app:rt_view_image_height="0"
+        app:rt_view_image_bottom="10"
+        app:rt_view_text_size="16sp"
+        app:rt_view_text_color="@color/grey_900"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:padding="10dp"
+    >
+
+    <Switch
+        android:id="@+id/s_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="启动app时对指纹进行验证" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/setting_about"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/s_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_upload"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="单独上传"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:layout_margin="10dp"
+                android:background="@drawable/upload"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="@string/setting_about"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_download"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="单独下载"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:layout_margin="10dp"
+                android:background="@drawable/download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="@string/setting_about"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
